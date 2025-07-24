@@ -1,0 +1,175 @@
+/* Global styles */
+body {
+    background: #ffffff;
+    color: #111111;
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 20px;
+    margin: 0;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+/* Card container */
+.container {
+    background: #ffffff;
+    border: 1px solid #e5e5e5;
+    border-radius: 16px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.06);
+    padding: 40px 30px;
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+    transition: box-shadow 0.3s ease;
+}
+
+.container:hover {
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.08);
+}
+
+/* Title */
+h1 {
+    color: #111;
+    font-size: 2rem;
+    margin-bottom: 0.3em;
+    letter-spacing: -0.5px;
+}
+
+/* Subtitle */
+.subtitle {
+    color: #555555;
+    font-size: 1rem;
+    margin-bottom: 2em;
+}
+
+/* Textarea input */
+textarea {
+    width: 100%;
+    height: 130px;
+    padding: 14px;
+    font-size: 16px;
+    border: 1px solid #cccccc;
+    border-radius: 10px;
+    background-color: #fafafa;
+    color: #111111;
+    resize: vertical;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+textarea:focus {
+    border-color: #111;
+}
+
+/* Analyze Button */
+button {
+    margin-top: 20px;
+    padding: 14px 28px;
+    font-size: 16px;
+    background-color: #111111;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.25s ease;
+}
+
+button:hover {
+    background-color: #333333;
+}
+
+/* Result Display */
+#result {
+    margin-top: 25px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 12px 18px;
+    border-radius: 10px;
+    background-color: #f5f5f5;
+    color: #222222;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+}
+
+.hidden {
+    display: none;
+}
+
+/* Sentiment-specific coloring */
+.positive {
+    color: #007f5f;
+}
+
+.negative {
+    color: #d90429;
+}
+
+.neutral {
+    color: #555555;
+}
+
+/* Footer */
+footer {
+    margin-top: 50px;
+    font-size: 0.9rem;
+    color: #888888;
+    text-align: center;
+}
+
+/* Toast message */
+.toast {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #111111;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    z-index: 1000;
+}
+
+/* Show toast */
+.toast.show {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateX(-50%) translateY(-10px);
+}
+
+/* Spinner overlay */
+.spinner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    display: none;
+}
+
+/* Spinner animation */
+.spinner::after {
+    content: \"\";
+    width: 40px;
+    height: 40px;
+    border: 4px solid #ccc;
+    border-top: 4px solid #000;
+    border-radius: 50%;
+    animation: spin 0.9s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}

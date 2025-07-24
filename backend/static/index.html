@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sentiment Analyzer</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Sentiment Analysis</h1>
+        <p class="subtitle">Understand the tone of your text instantly.</p>
+        <textarea id="inputText" placeholder="Type something here..."></textarea>
+        <button onclick="analyze()">Analyze Sentiment</button>
+        <div id="result" class="hidden"></div>
+    </div>
+
+    <footer>Built with 🤖 Transformers + FastAPI</footer>
+    <script src="/static/script.js"></script>
+    <div class="toast" id="toast"></div>
+    <div class="spinner" id="spinner"></div>
+
+</body>
+</html>
